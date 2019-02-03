@@ -1,0 +1,21 @@
+mat-icon{
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+}
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+button{
+  padding: 10px;
+  margin:10px;
+}

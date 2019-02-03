@@ -1,0 +1,18 @@
+.icon-card {
+  /* display: flex; */
+  display: inline-flex;
+  max-width: 500px;
+  max-height: 500px;
+  flex-direction: column;
+  margin:30px;
+  
+
+}
+
+mat-icon{
+  display: table-footer-group;
+}
+
+.span{
+  border:1px solid black;
+}

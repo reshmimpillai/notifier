@@ -1,0 +1,84 @@
+
+
+<form class="form flex center center" #f="ngForm" (ngSubmit)="onsubmit(f)" >
+  <!-- <mat-form-field>
+
+    <input matInput placeholder="Category">
+  </mat-form-field> -->
+
+  <!-- <mat-form-field>
+    <mat-select ngModel name="category" required >
+      <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+    
+    </mat-select>
+    <mat-label>Category</mat-label>
+  </mat-form-field> -->
+  <!-- <select name="categorySelected" (change)="onSelected($event)">
+      <option *ngFor="let category of categories" value="category">{{category}}</option>
+    </select> -->
+
+    <mat-form-field>
+      <mat-select [(ngModel)]="mainCategory" name="mainCategory" required >
+        <mat-option *ngFor="let mainCategory of mainCategories" [value]="mainCategory">{{mainCategory}}</mat-option>
+        <!-- <mat-option value="option">BESCOM</mat-option> -->
+      </mat-select>
+      <mat-label>Main Category</mat-label>
+
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select [(ngModel)]="subCategory" name="subCategory" required >
+          <mat-option *ngFor="let subCategory of subCategories" [value]="subCategory">{{subCategory}}</mat-option>
+          <!-- <mat-option value="option">BESCOM</mat-option> -->
+        </mat-select>
+        <mat-label>Sub Category</mat-label>
+      </mat-form-field>
+
+    <mat-form-field *ngIf="category==='OTHERS'">
+        <input matInput placeholder="others" ngModel name="otherCategory" required>
+  
+      </mat-form-field>
+      
+
+  <!-- <mat-form-field>
+    <input matInput placeholder="Sub category" ngModel name="subcategory" required>
+
+  </mat-form-field> -->
+
+  <mat-form-field *ngIf="category==='LIC'">
+    <input matInput placeholder="Policy holder name" ngModel name="policyholdername" required>
+  </mat-form-field>
+  
+  <mat-form-field *ngIf="category==='LIC'">
+    <input matInput placeholder="Policy name" ngModel name="policyname" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Due date" ngModel
+    name="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select ngModel name="mode" required >
+      <mat-option *ngFor="let mode of modes" [value]="mode">{{mode}}</mat-option>
+      <!-- <mat-option value="option">BESCOM</mat-option> -->
+    </mat-select>
+    <mat-label>Mode</mat-label>
+  </mat-form-field>
+
+      <div class="icon__container">
+          <button mat-raised-button type="button" class="mat-button" (click)="openDialog()">Pick Icon</button>
+
+          <mat-icon class="mat-icon" *ngIf="selectedIcon!=null" [svgIcon]="selectedIcon"></mat-icon>
+      </div>
+     
+      <button mat-raised-button type="submit" color="primary" [disabled]="!f.valid && selectedIcon==null">Submit</button>
+
+
+
+
+
+</form>
+
+

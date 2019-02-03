@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Select an Icon </h1>
+
+<div mat-dialog-content>
+  <!-- <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field> -->
+
+  <!-- <mat-icon svgIcon="appt"></mat-icon>
+  <mat-icon svgIcon="lic1"></mat-icon>
+  <mat-icon svgIcon="lic2"></mat-icon>
+  <mat-icon svgIcon="lic3"></mat-icon> -->
+
+  <button  *ngFor="let iconName of iconList;index as i" (click)="onIconSelect(iconName)">
+  <mat-icon [svgIcon]="iconName"></mat-icon>
+</button>
+<!--
+<mat-radio-group class="example-radio-group">
+  <mat-radio-button class="example-radio-button" *ngFor="let iconName of iconList">
+    <mat-icon [svgIcon]="iconName" (click)="onIconSelect($event)"></mat-icon>
+  </mat-radio-button>
+</mat-radio-group> -->
+
+
+
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button (click)="onNoClick()"></button> -->
+  <button mat-raised-button (click)="onNoClick()" color="primary">Ok</button>
+  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+</div>
