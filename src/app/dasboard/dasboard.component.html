@@ -25,16 +25,34 @@
     
   
 </div> -->
-<div *ngFor="let obj of myObj4">
+<!-- <div *ngFor="let obj of myObj4">
 
 <div class="icon-card" *ngFor="let main of obj.children">
    <span class="span">
       {{main.node}}
    </span>
+   
    <span class="span" *ngFor="let child of main.children">
     {{child.node}}
  </span>
   </div>
+</div> -->
+
+<div class="icon-card" *ngFor="let obj of myObj4">
+  <mat-card *ngFor="let main of obj.children" appMaterialElevation [defaultElevation]="defaultElevation" raisedElevation="16" matBadge="1" matBadgePosition="before" matBadgeColor="warn">
+
+    <mat-card-header>
+     
+        <mat-card-title>{{main.node}}</mat-card-title>
+        
+      </mat-card-header>
+      <mat-icon  mat-card-image [svgIcon]="main.icon"></mat-icon>
+    
+     
+  </mat-card>
+ 
+    
+  
 </div>
   
   

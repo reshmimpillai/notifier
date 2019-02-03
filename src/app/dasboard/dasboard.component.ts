@@ -69,10 +69,12 @@ export class DasboardComponent implements OnInit {
       children:[
         {
           node:'Finance',
+          icon:'lic3',
           children:
           [
             {
             node:'LIC',
+           
             details:{
               duedate:'5/5/1990'
             }
@@ -80,6 +82,7 @@ export class DasboardComponent implements OnInit {
           },
           {
             node:'BSL',
+           
             details:{
               duedate:'6/6/1990'
             }
@@ -96,10 +99,12 @@ export class DasboardComponent implements OnInit {
       children:[
         {
           node:'Grocery',
+          icon:'appt',
           children:
           [
             {
             node:'Pulses',
+           
             details:{
               duedate:'5/5/1990'
             }
@@ -107,6 +112,7 @@ export class DasboardComponent implements OnInit {
           },
           {
             node:'Juices',
+           
             details:{
               duedate:'6/6/1990'
             }
